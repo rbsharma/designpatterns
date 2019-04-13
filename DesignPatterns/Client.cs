@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns
 {
-    class Client
+    public class Client
     {
         static void Main(string[] args)
         {
