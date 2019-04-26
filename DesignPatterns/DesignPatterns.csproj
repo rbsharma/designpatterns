@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Factory\AbstractFactory\AbstractFactory.cs" />
+    <Compile Include="Factory\AbstractFactory\AbstractFactorySimplified.cs" />
     <Compile Include="Factory\DoughType.cs" />
     <Compile Include="Factory\FactoryMethod\FactoryMethod.cs" />
     <Compile Include="Factory\IPizza.cs" />

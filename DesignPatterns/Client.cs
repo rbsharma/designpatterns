@@ -14,6 +14,7 @@ namespace DesignPatterns
     {
         static void Main(string[] args)
         {
+            #region FACTORY PATTERN
             IPizza pizza;
             List<string> pizzaIngredients = new List<string>() { "ONE", "TWO" };
 
@@ -38,6 +39,17 @@ namespace DesignPatterns
             pizza = new ItalianPizzaAbstractFactory().OrderPizza(pizzaIngredients);
             pizza = new ItalianPizzaAbstractFactory(new NewYorkPizzaFactory()).OrderPizza(pizzaIngredients);
             pizza.Serve();
+            #endregion
+
+            #region SIMPLIFIED ABSTRACT FACTORY CREATION EXAMPLE
+            Console.Clear();
+            Product product;
+            product = new ConcreteAbstractFactory().Create();
+            product.TypeSpecificMethod();
+
+            product = new ConcreteAbstractFactory(new ConcreteFactoryB()).Create();
+            product.TypeSpecificMethod();
+            #endregion
             #endregion
         }
     }
