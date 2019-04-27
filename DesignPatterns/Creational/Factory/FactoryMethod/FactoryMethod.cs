@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DesignPatterns.Factory.FactoryMethod
+namespace DesignPatterns.Creational.Factory.FactoryMethod
 {
     public abstract class PizzaFactory
     {

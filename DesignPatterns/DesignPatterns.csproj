@@ -42,15 +42,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Factory\AbstractFactory\AbstractFactory.cs" />
-    <Compile Include="Factory\AbstractFactory\AbstractFactorySimplified.cs" />
-    <Compile Include="Factory\DoughType.cs" />
-    <Compile Include="Factory\FactoryMethod\FactoryMethod.cs" />
-    <Compile Include="Factory\IPizza.cs" />
+    <Compile Include="Creational\Factory\AbstractFactory\AbstractFactory.cs" />
+    <Compile Include="Creational\Factory\AbstractFactory\AbstractFactorySimplified.cs" />
+    <Compile Include="Creational\Factory\DoughType.cs" />
+    <Compile Include="Creational\Factory\FactoryMethod\FactoryMethod.cs" />
+    <Compile Include="Creational\Factory\IPizza.cs" />
     <Compile Include="Client.cs" />
-    <Compile Include="Factory\PizzaType.cs" />
-    <Compile Include="Factory\SimpleFactory\PizzaFactory.cs" />
+    <Compile Include="Creational\Factory\PizzaType.cs" />
+    <Compile Include="Creational\Factory\SimpleFactory\PizzaFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Structural\Adapter\Adapter.cs" />
+    <Compile Include="Structural\Adapter\Pragmatic\OneAuth.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

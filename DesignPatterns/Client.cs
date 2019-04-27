@@ -1,12 +1,11 @@
-﻿using DesignPatterns.Factory;
-using DesignPatterns.Factory.AbstractFactory;
-using DesignPatterns.Factory.FactoryMethod;
-using DesignPatterns.Factory.SimpleFactory;
+﻿using DesignPatterns.Creational.Factory;
+using DesignPatterns.Creational.Factory.AbstractFactory;
+using DesignPatterns.Creational.Factory.FactoryMethod;
+using DesignPatterns.Creational.Factory.SimpleFactory;
+using DesignPatterns.Structural.Adapter;
+using DesignPatterns.Structural.Adapter.Pragmatic;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DesignPatterns
 {
@@ -14,6 +13,49 @@ namespace DesignPatterns
     {
         static void Main(string[] args)
         {
+            #region ADAPTOR PATTERN
+
+            #region PRAGMATIC
+            //Without Adapter
+            CustomAuth.CustomAuthorization.AuthorizeUser();
+            GoogleAuth.GoogleAuthorization.SignIn();
+            FbAuth.FacebookAuth.Login();
+
+
+            //With Adapter
+            //Design and Code Consistency
+            IAuthProvider authProvider;
+            authProvider = new AuthProvider(AuthType.CUSTOM);
+            authProvider.Authorize();
+
+            authProvider = new AuthProvider(AuthType.FB);
+            authProvider.Authorize();
+
+            authProvider = new AuthProvider(AuthType.GOOGLE);
+            authProvider.Authorize();
+            Console.Read();
+            #endregion
+
+
+            #region THEORITICAL
+            //Without Adapter Method;
+            AdapteeA adapteeA = new AdapteeA();
+            adapteeA.UseAdapteeA();
+            AdapteeB adapteeB = new AdapteeB();
+            adapteeB.UseAdapteeB();
+
+            //With Adapter Method; ITarget interface provides consistency; 
+            ITarget target;
+            target = new AdapterA();
+            target.Method();
+            target = new AdapterB();
+            target.Method();
+
+            Console.Read();
+            #endregion
+
+            #endregion
+
             #region FACTORY PATTERN
             IPizza pizza;
             List<string> pizzaIngredients = new List<string>() { "ONE", "TWO" };

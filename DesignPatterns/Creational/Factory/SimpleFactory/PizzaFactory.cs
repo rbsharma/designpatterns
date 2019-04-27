@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DesignPatterns.Factory.SimpleFactory
+namespace DesignPatterns.Creational.Factory.SimpleFactory
 {
     public class PizzaStore
     {

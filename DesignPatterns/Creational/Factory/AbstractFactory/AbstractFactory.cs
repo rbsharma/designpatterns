@@ -1,11 +1,7 @@
-﻿using DesignPatterns.Factory.FactoryMethod;
-using System;
+﻿using DesignPatterns.Creational.Factory.FactoryMethod;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace DesignPatterns.Factory.AbstractFactory
+namespace DesignPatterns.Creational.Factory.AbstractFactory
 {
     public abstract class PizzaAbstractFactory
     {
